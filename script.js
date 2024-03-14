@@ -119,6 +119,10 @@ function playagain() {
   }
 }
 
+function playagain2() {
+    window.location.href = "/index.html";
+  }
+
 function next(){
     window.location.href = './PAGES/congrats.html';
 }
