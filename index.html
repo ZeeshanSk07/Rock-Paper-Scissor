@@ -1,71 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+
     <title>Rock Paper Scissor</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">
-            <div>ROCK</div>
-            <div>PAPER</div>
-            <div>SCISSORS</div>
-        </div>
-        <div class="score">
+      <div class="logo">
+        <div>ROCK</div>
+        <div>PAPER</div>
+        <div>SCISSORS</div>
+      </div>
+      <div class="score">
         <div class="compscore">
-                <div>
-                    computer <br>
-                    score
-                </div>
-                <div id="pc-score" class="final-score">0</div>
-            </div>
-            <div class="userscore">
-                <div>
-                    your <br>
-                    score
-                </div>
-                <div id="user-score" class="final-score">0</div>
-            </div>
-            </div>
+          <div>
+            computer <br />
+            score
+          </div>
+          <div id="pc-score" class="final-score">0</div>
+        </div>
+        <div class="userscore">
+          <div>
+            your <br />
+            score
+          </div>
+          <div id="user-score" class="final-score">0</div>
+        </div>
+      </div>
     </header>
 
-    <div id='game' class="game">
-        <img src="images/bg-triangle.svg" alt="traingle">
+    <div id="game" class="game">
+      <img src="images/bg-triangle.svg" alt="traingle" />
 
-        <div class="gamedisplay">
-            <div class="rock" ><img onclick="choose('rock')" src="images/icon-rock.png" alt="Rock"></div>
-            <div class="paper"><img onclick="choose('paper')" src="images/icon-paper.png" alt="Paper"></div>
-            <div class="scissor" ><img onclick="choose('scissor')" src="images/icon-scissor.png" alt="Scissor"></div>
-            
+      <div class="gamedisplay">
+        <div class="rock">
+          <img onclick="choose('rock')" src="images/icon-rock.png" alt="Rock" />
         </div>
+        <div class="paper">
+          <img
+            onclick="choose('paper')"
+            src="images/icon-paper.png"
+            alt="Paper"
+          />
+        </div>
+        <div class="scissor">
+          <img
+            onclick="choose('scissor')"
+            src="images/icon-scissor.png"
+            alt="Scissor"
+          />
+        </div>
+      </div>
     </div>
 
     <div id="play" class="play">
-        <div class="user"><div class="label">You Picked</div><br><div id="user"></div></div>
-        <div class="center"><div id="result" class="result"></div><div class="text">against pc <br><button onclick="playagain()" class="playagain">PLAY AGAIN</button></div></div>
-        <div class="pc"><div class="label">pc picked</div><br><div id="pc" ></div></div>
+      <div class="user">
+        <div class="label">You Picked</div>
+        <br />
+        <div id="user"></div>
+      </div>
+      <div class="center">
+        <div id="result" class="result"></div>
+        <div class="text">
+          against pc <br /><button onclick="playagain()" class="playagain">
+            PLAY AGAIN
+          </button>
+        </div>
+      </div>
+      <div class="pc">
+        <div class="label">pc picked</div>
+        <br />
+        <div id="pc"></div>
+      </div>
     </div>
 
     <div id="rulebook" class="rule" hidden>
-        <div onclick="hiderulebook()" class="cancel">X</div>
-        <div class="head">Game Rules</div>
-        <ul>
-            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
-            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
-            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
-            <li>If both players lay down the same hand, each player lays down another hand</li>
-        </ul>
+      <div onclick="hiderulebook()" class="cancel">X</div>
+      <div class="head">Game Rules</div>
+      <ul>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time
+        </li>
+        <li>
+          If both players lay down the same hand, each player lays down another
+          hand
+        </li>
+      </ul>
     </div>
 
     <div class="rules-button">
-        <button id="nextbtn" hidden><a href="./congrats.html">next</a></button>
-        <button onclick="ruleshow()" class="onrule">rules</button>
+      <button onclick="next()" id="nextbtn" hidden>
+        next
+      </button>
+      <button onclick="ruleshow()" class="onrule">rules</button>
     </div>
 
     <script src="script.js" defer></script>
-    
-</body>
+  </body>
 </html>
