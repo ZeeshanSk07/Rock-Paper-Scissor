@@ -119,10 +119,8 @@ function playagain() {
   }
 }
 
-function playagain2() {
-    show("game");
-  hide("play");
-  hide("rulebook");
+function refres() {
+    
     console.log(hello);
     window.location.href = "../index.html";
 }
