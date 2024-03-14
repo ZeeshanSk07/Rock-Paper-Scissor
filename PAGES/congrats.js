@@ -1,15 +1,11 @@
 function ruleshow() {
-    document.getElementById("rulebook").style.display = "block";
-  }
+  document.getElementById("rulebook").style.display = "block";
+}
 
-  function playagain() {
-  
-    window.location.href ='/index.html';
-    
-   
-  }
+function playagain() {
+  window.location.href = "/index.html";
+}
 
-  function hiderulebook() {
-    document.getElementById("rulebook").style.display = "none";
-  }
-  
+function hiderulebook() {
+  document.getElementById("rulebook").style.display = "none";
+}
