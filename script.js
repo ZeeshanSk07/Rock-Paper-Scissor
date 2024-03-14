@@ -120,9 +120,12 @@ function playagain() {
 }
 
 function playagain2() {
-    console.log(fun );
+    show("game");
+  hide("play");
+  hide("rulebook");
+    console.log(hello);
     window.location.href = "../index.html";
-  }
+}
 
 function next(){
     window.location.href = './PAGES/congrats.html';
