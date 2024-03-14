@@ -86,7 +86,6 @@ function choose(input) {
     localStorage.setItem("yourscore", yourscore);
     let userscore = document.getElementById("user-score");
     userscore.textContent = yourscore;
-    console.log(yourscore);
   } else {
     result.innerHTML = "<div>you lost</div>";
 
