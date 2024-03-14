@@ -120,8 +120,6 @@ function playagain() {
 }
 
 function refres() {
-    
-    console.log(hello);
     window.location.href = "../index.html";
 }
 
