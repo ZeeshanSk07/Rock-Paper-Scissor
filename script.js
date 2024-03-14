@@ -120,7 +120,7 @@ function playagain() {
 }
 
 function playagain2() {
-    window.location.href = "./index.html";
+    window.location.href = "../index.html";
   }
 
 function next(){
