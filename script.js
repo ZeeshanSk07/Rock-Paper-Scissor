@@ -139,7 +139,7 @@ function hiderulebook() {
 
 //to show element with id
 function show(id) {
-  document.getElementById(id).style = "display:flex; flex-direction: row";
+  document.getElementById(id).style.display = 'flex';
 }
 
 //to hide element with id
