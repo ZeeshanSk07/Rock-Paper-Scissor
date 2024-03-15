@@ -46,10 +46,10 @@ function choose(input) {
     '.png" alt="' +
     pcchoose +
     '"></div>';
-
   //remove margin-top from paper to display it in center and scale it.
   var pcImage = document.getElementById("pc").querySelector("img");
-  pcImage.style = "margin-top : 0; transform : scale(1.5);";
+  pcImage.classList.add("pc-image");
+  pcImage.style.marginTop = "0";
 
   //fix rules button in bottom after onclk
   let rulesButtons = document.getElementsByClassName("rules-button");
@@ -65,39 +65,44 @@ function choose(input) {
 
   //Game Logic
   if (input == pcchoose) {
-    result.innerHTML = "<div>tie</div>";
+    result.innerHTML = "<div>TIE UP</div>";
+    document.getElementById("textc").style.visibility = "hidden";
+
+    document.getElementById("replay").innerText = "REPLAY";
+    document.getElementById("replay").style.width = "140px";
   } else if (
     (input == "rock" && pcchoose == "scissor") ||
     (input == "paper" && pcchoose == "rock") ||
     (input == "scissor" && pcchoose == "paper")
   ) {
-    setTimeout(function () {}, 1000);
     result.innerHTML = "<div>you win</div>";
-    //show next button on win
-    document.getElementById("nextbtn").style.display = "block";
 
-    setTimeout(function () {}, 2000);
-    //apply styles
-    userImage.style =
-      "margin-top:0;z-index:-1;transform:scale(1.5);box-shadow: 0 0 0 30px rgba(39,155,39), 0 0 0 45px rgba(29, 168, 43, 0.79), 0 0 0 60px rgba(46, 154, 37, 0.39);";
+    setTimeout(function () {
+      //show next button on win
+      document.getElementById("nextbtn").style.display = "block";
+      //apply styles
+      userImage.style =
+        "margin-top:0;z-index:-1;transform:scale(1.5);box-shadow: 0 0 0 30px rgba(39,155,39), 0 0 0 45px rgba(29, 168, 43, 0.79), 0 0 0 60px rgba(46, 154, 37, 0.39);";
 
-    //increase score
-    yourscore += 1;
-    localStorage.setItem("yourscore", yourscore);
-    let userscore = document.getElementById("user-score");
-    userscore.textContent = yourscore;
+      //increase score
+      yourscore += 1;
+      localStorage.setItem("yourscore", yourscore);
+      let userscore = document.getElementById("user-score");
+      userscore.textContent = yourscore;
+    }, 600);
   } else {
     result.innerHTML = "<div>you lost</div>";
+    setTimeout(function () {
+      //apply styles
+      pcImage.style =
+        "margin-top:0;z-index:-1;transform:scale(1.5);box-shadow: 0 0 0 30px rgba(39,155,39), 0 0 0 45px rgba(29, 168, 43, 0.79), 0 0 0 60px rgba(46, 154, 37, 0.39);";
 
-    //apply styles
-    pcImage.style =
-      "margin-top:0;z-index:-1;transform:scale(1.5);box-shadow: 0 0 0 30px rgba(39,155,39), 0 0 0 45px rgba(29, 168, 43, 0.79), 0 0 0 60px rgba(46, 154, 37, 0.39);";
-
-    //increase score
-    aiscore += 1;
-    localStorage.setItem("aiscore", aiscore);
-    let pcscore = document.getElementById("pc-score");
-    pcscore.textContent = aiscore;
+      //increase score
+      aiscore += 1;
+      localStorage.setItem("aiscore", aiscore);
+      let pcscore = document.getElementById("pc-score");
+      pcscore.textContent = aiscore;
+    }, 600);
   }
 }
 
@@ -106,7 +111,7 @@ function playagain() {
   hide("play");
   hide("rulebook");
 
-  window.location.href ='./index.html';
+  window.location.href = "./index.html";
   pc.innerHTML = "";
   //hide next button
   document.getElementById("nextbtn").style.display = "none";
@@ -119,11 +124,11 @@ function playagain() {
 }
 
 function refres() {
-    window.location.href = "../index.html";
+  window.location.href = "../index.html";
 }
 
-function next(){
-    window.location.href = './PAGES/congrats.html';
+function next() {
+  window.location.href = "./PAGES/congrats.html";
 }
 
 function ruleshow() {
@@ -136,7 +141,7 @@ function hiderulebook() {
 
 //to show element with id
 function show(id) {
-  document.getElementById(id).style.display = 'flex';
+  document.getElementById(id).style.display = "flex";
 }
 
 //to hide element with id

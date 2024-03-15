@@ -186,7 +186,19 @@ a {
   align-items: center;
   margin-bottom: 2vh;
   z-index: 1;
+  opacity: 0;
+  animation: fade 1000ms forwards;
 }
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .result {
   color: white;
   width: 14vw;
@@ -207,7 +219,6 @@ a {
 }
 
 .label {
-  margin-bottom: 7vh;
   font-weight: 600;
   letter-spacing: 2px;
   z-index: 1;
@@ -227,4 +238,26 @@ a {
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 2;
+}
+
+#user,
+#pc {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pc-image {
+  animation: transform 1s forwards;
+  transform: scale(1);
+}
+
+@keyframes transform {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }

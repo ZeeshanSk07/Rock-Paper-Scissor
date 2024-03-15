@@ -65,7 +65,8 @@
       <div class="center">
         <div id="result" class="result"></div>
         <div class="text">
-          against pc <br /><button onclick="playagain()" class="playagain">
+          <div id="textc">against pc</div>
+          <button id="replay" onclick="playagain()" class="playagain">
             PLAY AGAIN
           </button>
         </div>
@@ -98,9 +99,7 @@
     </div>
 
     <div class="rules-button">
-      <button onclick="next()" id="nextbtn" hidden>
-        next
-      </button>
+      <button onclick="next()" id="nextbtn" hidden>next</button>
       <button onclick="ruleshow()" class="onrule">rules</button>
     </div>
 
